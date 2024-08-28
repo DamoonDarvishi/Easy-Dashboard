@@ -19,7 +19,6 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
   // NOTE: comment in this code when you get to this point in the course
 
   const allPages = generatePagination(currentPage, totalPages);
-  console.log(allPages);
   return (
     <>
       {/* NOTE: comment in this code when you get to this point in the course */}
@@ -42,7 +41,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
 
             return (
               <PaginationNumber
-                key={page}
+                key={index}
                 href={createPageURL(page)}
                 page={page}
                 position={position}
