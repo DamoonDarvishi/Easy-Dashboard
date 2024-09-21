@@ -5,7 +5,14 @@
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
-    "test": "vitest --no-watch"
+    "test": "vitest --no-watch",
+    "prepare": "husky",
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --quiet --fix"
+    ]
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
@@ -35,7 +42,9 @@
     "dotenv": "^16.4.5",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.7",
+    "husky": "^9.1.6",
     "jsdom": "^25.0.0",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "vitest": "^2.0.5"
   },
