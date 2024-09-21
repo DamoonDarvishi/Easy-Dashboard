@@ -5,7 +5,7 @@
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
-    "test": "vitest"
+    "test": "vitest --no-watch"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.5",
