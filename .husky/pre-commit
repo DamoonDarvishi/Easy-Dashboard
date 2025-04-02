@@ -1,2 +1,4 @@
+pnpm run lint
+pnpm run format
 pnpm test
 pnpm run pre-commit
