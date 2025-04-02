@@ -1,15 +1,15 @@
-"use client";
-import { lusitana } from "@/app/ui/fonts";
+'use client';
+import { lusitana } from './fonts';
 import {
   AtSymbolIcon,
   KeyIcon,
   ExclamationCircleIcon,
-} from "@heroicons/react/24/outline";
-import { ArrowRightIcon } from "@heroicons/react/20/solid";
-import { Button } from "./button";
+} from '@heroicons/react/24/outline';
+import { ArrowRightIcon } from '@heroicons/react/20/solid';
+import { Button } from './button';
 //@ts-ignore
-import { useActionState } from "react";
-import { authenticate } from "@/app/lib/actions";
+import { useActionState } from 'react';
+import { authenticate } from '../lib/actions';
 
 export default function LoginForm() {
   const [errorMessage, formAction, isPending] = useActionState(
@@ -37,6 +37,7 @@ export default function LoginForm() {
                 id="email"
                 type="email"
                 name="email"
+                defaultValue={'user@nextmail.com'}
                 placeholder="Enter your email address"
                 required
               />
@@ -57,6 +58,7 @@ export default function LoginForm() {
                 type="password"
                 name="password"
                 placeholder="Enter password"
+                defaultValue={'123456'}
                 required
                 minLength={6}
               />
